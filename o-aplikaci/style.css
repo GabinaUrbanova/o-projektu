@@ -16,7 +16,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start; /* Zarovná obsah nahoře */
     min-height: 100vh;
     margin: 0;
@@ -45,7 +45,7 @@ body {
     background-color:  #80562E;
 }
 
-.drawers {
+.navigation {
     display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
     flex-direction: column; /* Vždy vedle sebe */
     width: 340px;
@@ -58,11 +58,12 @@ body {
     padding-top: 20px;
 }
 
-.aboutUs, .aboutOurProject {
+.aboutUs, .aboutOurProject, .empty {
     display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
     flex-direction: column; /* Vždy vedle sebe */
     max-width: 1280px;
     width: 90%;
+    height: 100px;
     justify-content: center; /* Vycentrování obsahu uvnitř kontejneru */
     border: 5px solid;
     border-color:black;
@@ -71,13 +72,16 @@ body {
 }
 
 .drawersBtn {
-  font-size: 50px;
+  font-size: 35px;
   font-family: "Rubik Moonrocks", sans-serif;
   display: block;
   padding: 10px;
   text-decoration: none;
   color: #ffffff;
-  justify-content: start;
+}
+
+.aboutUs a, .aboutOurProject a {
+  justify-content: center;
 }
 
 h1 {
@@ -96,7 +100,7 @@ h2 {
 .board {
     display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
     flex-direction: column;
-    width: 825px;
+    width: 940px;
     height: 400px;
     justify-content: center;
     align-items: center;
@@ -106,7 +110,7 @@ h2 {
     padding-top: 20px;
 }
 
-.navigationAndBoard {
+.main-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
