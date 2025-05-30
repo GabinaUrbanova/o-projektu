@@ -1,5 +1,7 @@
 /* Používáme intuitivní výpočet rozměrů prvků. */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -14,73 +16,104 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start; /* Zarovná obsah nahoře */
-    min-height: 100vh;
-    margin: 0;
-    background-color: white;
-    padding: 20px; /* Přidáno padding pro menší obrazovky */
-    box-sizing: border-box; /* Zahrnout padding do šířky */
-    flex-direction: column; /* Vždy vedle sebe */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  /* Zarovná obsah nahoře */
+  min-height: 100vh;
+  margin: 0;
+  background-color: white;
+  padding: 20px;
+  /* Přidáno padding pro menší obrazovky */
+  box-sizing: border-box;
+  /* Zahrnout padding do šířky */
+  flex-direction: column;
+  /* Vždy vedle sebe */
 }
 
 .header {
-    display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
-    flex-direction: row; /* Vždy vedle sebe */
-    max-width: 1280px;
-    width: 100%;
-    justify-content: center; /* Vycentrování obsahu uvnitř kontejneru */
+  display: flex;
+  /* Použijeme flexbox pro uspořádání vnitřních divů */
+  flex-direction: row;
+  /* Vždy vedle sebe */
+  max-width: 1280px;
+  width: 100%;
+  justify-content: center;
+  /* Vycentrování obsahu uvnitř kontejneru */
 }
 
 .teachersDesk {
-    display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
-    flex-direction: row; /* Vždy vedle sebe */
-    max-width: 1280px;
-    width: 100%;
-    justify-content: start; /* Vycentrování obsahu uvnitř kontejneru */
-    border: 5px solid;
-    border-color:black;
-    background-color:  #80562E;
+  display: flex;
+  /* Použijeme flexbox pro uspořádání vnitřních divů */
+  flex-direction: row;
+  /* Vždy vedle sebe */
+  max-width: 1280px;
+  width: 100%;
+  justify-content: start;
+  /* Vycentrování obsahu uvnitř kontejneru */
+  border: 5px solid;
+  border-color: black;
+  background-color: #80562E;
 }
 
 .navigation {
-    display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
-    flex-direction: column; /* Vždy vedle sebe */
-    width: 340px;
-    height: 400px;
-    justify-content: start;
-    align-items: center;
-    border: 5px solid;
-    border-color:black;
-    background-color:  #80562E;
-    padding-top: 20px;
+  display: flex;
+  /* Použijeme flexbox pro uspořádání vnitřních divů */
+  flex-direction: column;
+  /* Vždy vedle sebe */
+  width: 340px;
+  height: 400px;
+  justify-content: start;
+  align-items: center;
+  border: 5px solid;
+  border-color: black;
+  background-color: #80562E;
+  padding-top: 20px;
 }
 
-.aboutUs, .aboutOurProject, .empty {
-    display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
-    flex-direction: column; /* Vždy vedle sebe */
-    max-width: 1280px;
-    width: 90%;
-    height: 100px;
-    justify-content: center; /* Vycentrování obsahu uvnitř kontejneru */
-    border: 5px solid;
-    border-color:black;
-    background-color:  #AC723C;
-    margin: 10px;
+.aboutUs,
+.aboutOurProject,
+.empty {
+  display: flex;
+  /* Použijeme flexbox pro uspořádání vnitřních divů */
+  flex-direction: column;
+  /* Vždy vedle sebe */
+  max-width: 1280px;
+  width: 90%;
+  height: 100px;
+  justify-content: center;
+  /* Vycentrování obsahu uvnitř kontejneru */
+  align-items: center;
+  border: 5px solid;
+  border-color: black;
+  background-color: #AC723C;
+  margin: 10px;
 }
 
 .drawersBtn {
   font-size: 35px;
   font-family: "Rubik Moonrocks", sans-serif;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   text-decoration: none;
   color: #ffffff;
+  background: transparent;
+  /*odstraní bílé pozadí */
+  border: none;
+  /* odstraní ohraničení buttonu */
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 
-.aboutUs a, .aboutOurProject a {
+.aboutOurProject {
+  cursor: pointer;
+}
+
+.aboutOurProject a {
   justify-content: center;
 }
 
@@ -98,16 +131,17 @@ h2 {
 }
 
 .board {
-    display: flex; /* Použijeme flexbox pro uspořádání vnitřních divů */
-    flex-direction: column;
-    width: 940px;
-    height: 400px;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid;
-    border-color:black;
-    background-color:  #E9BE96;
-    padding-top: 20px;
+  display: flex;
+  /* Použijeme flexbox pro uspořádání vnitřních divů */
+  flex-direction: column;
+  width: 940px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid;
+  border-color: black;
+  background-color: #E9BE96;
+  padding-top: 20px;
 }
 
 .main-container {
@@ -117,10 +151,11 @@ h2 {
   align-items: center;
 }
 
-.mites, .schoolThings {
+.mites,
+.schoolThings {
   flex: 1;
   min-width: 280px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -134,8 +169,25 @@ h2 {
   text-align: center;
 }
 
-.mites img, .schoolThings img {
-    max-width: 80%;
-    height: auto;
+.mites img,
+.schoolThings img {
+  max-width: 80%;
+  height: auto;
 }
 
+.icon-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.icons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
