@@ -9,7 +9,25 @@ html {
 }
 
 .icon-button {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* z obrázku kruh */
+  object-fit: cover;
+  /* ořízne obrázek bez deformace */
   cursor: pointer;
+  border: 2px solid #ccc;
+  /* orámování */
+  margin: 0 10px
+    /* mezera mezi ikonama */
+}
+
+/* obal obou ikon */
+.icons-wrapper {
+  display: flex;
+  justify-content: center;
+  /* zarovnání doprostřed stránky */
+  gap: 20px;
+  /* mezera mezi ikonama */
+  margin-top: 20px;
 }
