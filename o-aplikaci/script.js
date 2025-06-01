@@ -1,8 +1,8 @@
 // čeká na načtení celého obsahu stránky
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('aboutUsButton');
-  const board = document.querySelector('.board');
   const projectButton = document.getElementById('aboutProjectBtn');
+  const board = document.querySelector('.board');
 
   button.addEventListener('click', () => {
     board.innerHTML = `
@@ -30,10 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     `;
   });
-});
 
-projectButton.addEventListener('click', () => {
-  board.innerHTML = `
+  projectButton.addEventListener('click', () => {
+    board.innerHTML = `
       <div class="container">
         <p>
           Tady bych dala fotky a kecy o našem projektu... Nezapomenout na zpětné
@@ -61,4 +60,5 @@ projectButton.addEventListener('click', () => {
         </p>
       </div>
     `;
+  });
 });
