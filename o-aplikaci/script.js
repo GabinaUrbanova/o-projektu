@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   button.addEventListener('click', () => {
     board.innerHTML = `
     <h2>O nás</h2>
-      <p>Jsme Gábina a Míša a společně tvoříme super tým!</p>
-      <p>Rády tvoříme weby, designujeme a zkoušíme nové věci.</p>
-      <p>Mrkni na naše GitHuby:</p>
+      <p>
+      Jsme Gábina a Míša a společně tvoříme super tým!
+      Mrkni na naše GitHuby:
+      </p>
       <div class="icons-wrapper">
       
       <a href="https://github.com/GabinaUrbanova" 
@@ -34,12 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   projectButton.addEventListener('click', () => {
     board.innerHTML = `
       <div class="container">
-        <p>
-          Tady bych dala fotky a kecy o našem projektu... Nezapomenout na zpětné
-          tlačítko zpátky na stránku... Sem vložíme nějaký odstavec o fungování
-          projektu a vložila bych sem i třeba dvě fotky, jak to teď vypadá ve
-          figmě... 
-        </p>
+      <h2>O našem projektu</h2>
         <p>
           Známe to z praxe – rozdělování dětí do skupin, snaha o
           férovost, kreativitu i zapojení všech… a nakonec stejně není někdo
@@ -62,3 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   });
 });
+
