@@ -10,6 +10,8 @@ html {
 }
 
 .container {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 20rem;
   margin-right: auto;
   margin-left: auto;
@@ -41,6 +43,10 @@ body {
   width: 100%;
   justify-content: center;
   /* Vycentrování obsahu uvnitř kontejneru */
+}
+
+.board, .teachersDesk {
+  flex: 1 1 100%;
 }
 
 .teachersDesk {
@@ -113,10 +119,6 @@ body {
   cursor: pointer;
 }
 
-.aboutOurProject a {
-  justify-content: center;
-}
-
 h1 {
   font-size: 100px;
   font-family: "Rubik Moonrocks", sans-serif;
@@ -134,8 +136,11 @@ h2 {
   display: flex;
   /* Použijeme flexbox pro uspořádání vnitřních divů */
   flex-direction: column;
-  width: 940px;
-  height: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   border: 5px solid;
@@ -149,6 +154,7 @@ h2 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-width: 500px;
 }
 
 .mites,
@@ -163,33 +169,15 @@ h2 {
   align-items: center;
 }
 
-.title {
-  display: flex;
-  align-items: flex-end;
-  text-align: center;
-}
-
 .mites img,
 .schoolThings img {
   max-width: 80%;
   height: auto;
 }
-
-.icon-button {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ccc;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-.icons-wrapper {
+.title {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  align-items: flex-end;
+  text-align: center;
 }
 
 .board p {
@@ -209,4 +197,15 @@ h2 {
   font-size: 36px;
   color: #5D3A00;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .mites,
+  .schoolThings {
+    display: none;
+  }
+  .title {
+    display: block;
+    width: 100;
+    text-align: center;
+  }
 }

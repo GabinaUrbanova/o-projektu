@@ -21,7 +21,6 @@ html {
   margin: 0 10px
     /* mezera mezi ikonama */
 }
-
 /* obal obou ikon */
 .icons-wrapper {
   display: flex;
@@ -31,3 +30,4 @@ html {
   /* mezera mezi ikonama */
   margin-top: 20px;
 }
+
