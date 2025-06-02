@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('click', () => {
     board.innerHTML = `
+    <div class="about-us">
     <h2>O nás</h2>
       <p>
       Jsme Gábina a Míša a společně tvoříme super tým!
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alt="Míša" 
       class="icon-button" />
     </a>
+    </div>
     </div>
     `;
   });
