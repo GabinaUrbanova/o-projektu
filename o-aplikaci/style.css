@@ -12,7 +12,7 @@ html {
 .main-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   /* stejna vyska deti */
   width: 100%;
@@ -75,7 +75,6 @@ body {
   /* Vždy vedle sebe */
   width: 340px;
   height: 400px;
-  justify-content: start;
   align-items: center;
   border: 5px solid black;
   background-color: #80562E;
@@ -139,13 +138,10 @@ h2 {
 .board {
   display: flex;
   /* Použijeme flexbox pro uspořádání vnitřních divů */
-  flex: 1;
   flex-direction: column;
   flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 100%;
-    justify-content: center;
+  width: auto;
+  justify-content: center;
   align-items: center;
   border: 5px solid black;
   background-color: #E9BE96;
