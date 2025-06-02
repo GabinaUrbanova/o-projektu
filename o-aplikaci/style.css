@@ -9,12 +9,15 @@ html {
   font-family: sans-serif;
 }
 
-.container {
+.main-container {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 20rem;
-  margin-right: auto;
-  margin-left: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  /* stejna vyska deti */
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 body {
@@ -45,7 +48,8 @@ body {
   /* Vycentrování obsahu uvnitř kontejneru */
 }
 
-.board, .teachersDesk {
+.board,
+.teachersDesk {
   flex: 1 1 100%;
 }
 
@@ -135,26 +139,18 @@ h2 {
 .board {
   display: flex;
   /* Použijeme flexbox pro uspořádání vnitřních divů */
+  flex: 1;
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
   width: 100%;
-  height: 100%;
-  justify-content: center;
+    justify-content: center;
   align-items: center;
   border: 5px solid;
   border-color: black;
   background-color: #E9BE96;
   padding-top: 20px;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 500px;
 }
 
 .mites,
@@ -174,6 +170,7 @@ h2 {
   max-width: 80%;
   height: auto;
 }
+
 .title {
   display: flex;
   align-items: flex-end;
@@ -187,22 +184,19 @@ h2 {
   text-align: justify;
 }
 
-.board .container {
-  max-width: 1000px;
-  justify-content: center;
-  align-items: center;
-}
-
 .board h2 {
   font-size: 36px;
   color: #5D3A00;
   text-align: center;
 }
+
 @media (max-width: 768px) {
+
   .mites,
   .schoolThings {
     display: none;
   }
+
   .title {
     display: block;
     width: 100;
